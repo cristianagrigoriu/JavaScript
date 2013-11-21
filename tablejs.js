@@ -8,7 +8,6 @@ function createTable(array) {
     var table = document.getElementById("table");
     var tableHead = document.createElement('thead');
     var tableBody = document.createElement('tbody');
-	//var tableBody = document.getElementByIdElement('tableBody');
     tableBody.setAttribute('id', "tbody");
     var i = 0;
     console.log(array.length);
@@ -144,7 +143,7 @@ function editPerson() {
     alert("vaca");
 }
 
-function onLoadTable() {
+function createInitialTable() {
 	createTable(array);
 	addColumn("table");
 }
