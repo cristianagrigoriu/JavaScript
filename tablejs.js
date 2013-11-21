@@ -4,8 +4,6 @@ var array = [{ nrCrt: 1, firstName: "John", lastName: "Lennon", age: 24, dateOfE
              { nrCrt: 4, firstName: "George", lastName: "Harrison", age: 24, dateOfEmployment: "1.11.1940", department: "Beatles" }
 ];
 
-createTable(array);
-
 function createTable(array) {
     var table = document.getElementById("table");
     var tableHead = document.createElement('thead');
@@ -104,7 +102,6 @@ function savePerson() {
     setExtraButtons(tableBody.rows[tableBody.rows.length - 1]);
     table.appendChild(tableBody);
 }
-addColumn("table");
 
 function addColumn(tableID) {
     var tblHeadObj = document.getElementById(tableID).tHead;
@@ -145,3 +142,6 @@ function deletePerson(rowNumber) {
 function editPerson() {
     alert("vaca");
 }
+
+createTable(array);
+addColumn("table");
