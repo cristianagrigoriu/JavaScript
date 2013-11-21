@@ -1,32 +1,3 @@
-var people = [{ nrCrt: 1, 
-			  firstName: "John", 
-			  lastName: "Lennon", 
-			  age: 24, 
-			  dateOfEmployment: "15.04.1940", 
-			  department: "Beatles" },
-			  
-             { nrCrt: 2, 
-			  firstName: "Paul", 
-			  lastName: "McCartney", 
-			  age: 24, 
-			  dateOfEmployment: "19.07.1940", 
-			  department: "Beatles" },
-			  
-             { nrCrt: 3, 
-			  firstName: "Ringo", 
-			  lastName: "Starr", 
-			  age: 24, 
-			  dateOfEmployment: "25.01.1940", 
-			  department: "Beatles" },
-			  
-             { nrCrt: 4, 
-			  firstName: "George", 
-			  lastName: "Harrison", 
-			  age: 24, 
-			  dateOfEmployment: "1.11.1940", 
-			  department: "Beatles" }
-];
-
 function createPeopleTable(people) {
     var table = document.getElementById("table");
     var tableHead = document.createElement('thead');
@@ -104,7 +75,6 @@ function savePerson() {
     var tBody = document.getElementById("tbody");
     var rowCount = table.rows.length;
     var colCount = table.rows[0].cells.length;
-    //var newPerson = new Person();
 
     var newPerson = {
         nrCrt: table.rows[rowCount - 1].cells[0].children[0].value,
@@ -115,7 +85,8 @@ function savePerson() {
         department: table.rows[rowCount - 1].cells[5].children[0].value
     }
 
-    array.push(newPerson);
+	/*add newPerson to the people array*/
+    //people.push(newPerson);
 
     /*delete the editing row*/
     cancelRow(table.rows.length - 1);
@@ -167,6 +138,34 @@ function editPerson() {
 }
 
 function createInitialTable() {
+	var people = [{ nrCrt: 1, 
+			  firstName: "John", 
+			  lastName: "Lennon", 
+			  age: 24, 
+			  dateOfEmployment: "15.04.1940", 
+			  department: "Beatles" },
+			  
+             { nrCrt: 2, 
+			  firstName: "Paul", 
+			  lastName: "McCartney", 
+			  age: 24, 
+			  dateOfEmployment: "19.07.1940", 
+			  department: "Beatles" },
+			  
+             { nrCrt: 3, 
+			  firstName: "Ringo", 
+			  lastName: "Starr", 
+			  age: 24, 
+			  dateOfEmployment: "25.01.1940", 
+			  department: "Beatles" },
+			  
+             { nrCrt: 4, 
+			  firstName: "George", 
+			  lastName: "Harrison", 
+			  age: 24, 
+			  dateOfEmployment: "1.11.1940", 
+			  department: "Beatles" }
+	];
 	createPeopleTable(people);
 	addColumn("table");
 }
