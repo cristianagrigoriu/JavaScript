@@ -1,18 +1,41 @@
-var array = [{ nrCrt: 1, firstName: "John", lastName: "Lennon", age: 24, dateOfEmployment: "15.04.1940", department: "Beatles" },
-             { nrCrt: 2, firstName: "Paul", lastName: "McCartney", age: 24, dateOfEmployment: "19.07.1940", department: "Beatles" },
-             { nrCrt: 3, firstName: "Ringo", lastName: "Starr", age: 24, dateOfEmployment: "25.01.1940", department: "Beatles" },
-             { nrCrt: 4, firstName: "George", lastName: "Harrison", age: 24, dateOfEmployment: "1.11.1940", department: "Beatles" }
+var people = [{ nrCrt: 1, 
+			  firstName: "John", 
+			  lastName: "Lennon", 
+			  age: 24, 
+			  dateOfEmployment: "15.04.1940", 
+			  department: "Beatles" },
+			  
+             { nrCrt: 2, 
+			  firstName: "Paul", 
+			  lastName: "McCartney", 
+			  age: 24, 
+			  dateOfEmployment: "19.07.1940", 
+			  department: "Beatles" },
+			  
+             { nrCrt: 3, 
+			  firstName: "Ringo", 
+			  lastName: "Starr", 
+			  age: 24, 
+			  dateOfEmployment: "25.01.1940", 
+			  department: "Beatles" },
+			  
+             { nrCrt: 4, 
+			  firstName: "George", 
+			  lastName: "Harrison", 
+			  age: 24, 
+			  dateOfEmployment: "1.11.1940", 
+			  department: "Beatles" }
 ];
 
-function createTable(array) {
+function createPeopleTable(people) {
     var table = document.getElementById("table");
     var tableHead = document.createElement('thead');
     var tableBody = document.createElement('tbody');
     tableBody.setAttribute('id', "tbody");
     var i = 0;
-    console.log(array.length);
-    while (i < array.length) {
-        createRow(array[i], tableBody);
+    console.log(people.length);
+    while (i < people.length) {
+        createRow(people[i], tableBody);
         i++;
     }
     table.appendChild(tableBody);
@@ -144,6 +167,6 @@ function editPerson() {
 }
 
 function createInitialTable() {
-	createTable(array);
+	createPeopleTable(people);
 	addColumn("table");
 }
