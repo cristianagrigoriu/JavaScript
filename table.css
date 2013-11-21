@@ -1,0 +1,36 @@
+table {
+	border: 1px solid black;
+	margin: auto auto auto auto;
+}
+thead tr{
+	height: 100px;
+	background-color: #a9a9a9;
+}
+tbody tr:nth-child(3n) {
+    background-color: #b0c4de;
+}
+tbody tr:nth-child(3n+1) {
+    background-color: #fff8dc;
+}
+tbody tr:nth-child(3n+2) {
+    background-color: #dc143c;
+}
+img {
+	 height: 80px;
+	 width: 80px;
+	 -webkit-transition: .1s;
+}
+img:hover {
+	-webkit-transform: scale(2.05,2.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 750ms;
+}
+p {
+	-webkit-transition-duration: .7s;
+}
+p:hover {
+	color: #dc143c;
+}
+div {
+	position: relative;
+}
